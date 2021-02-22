@@ -77,6 +77,10 @@ ul {
   transition: .2s all;
 }
 
+.header__nav  nav > ul > li > a.active {
+  border-bottom: 3px solid #fff;
+}
+
 .header__nav  nav > ul > li > a:last-child {
   margin-right: 15px;
 }
@@ -189,7 +193,19 @@ ul {
   background: #610202;
 }
 
+.about__team {
+  padding: 50px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.about__team > ul li {
+  padding-top: 20px;
+}
+
 /*preview end*/
+
+
 
 
 
