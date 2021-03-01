@@ -89,6 +89,10 @@ ul {
   border-bottom: 3px solid #fff;
 }
 
+.header__nav  nav > ul > li:first-child > a:hover{
+  border-bottom: none;
+}
+
 /* styled header end */
 
 /*preview start*/
@@ -205,16 +209,68 @@ ul {
 
 /*preview end*/
 
+/* club-victorys start */
+
+.club-victorys {
+  padding-bottom: 50px;
+}
+
+.club-victorys h1{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 38px;
+  letter-spacing: 2px;
+}
+
+.photo {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-image: url('../img/barclays.jpg');
+}
+
+.club-victorys__block {
+  width: 33%;
+  margin-bottom: 20px;
+  transition: .3s all;
+}
+
+.club-victorys__block p {
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.club-victorys__blocks {
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.club-victorys__block:last-child {
+  margin: 0 auto;
+}
+
+.club-victorys__block:hover {
+  transform: scale(1.2);
+}
+
+/* club-victorys end */
+
 
 
 
 
 /* styled footer start */
 .footer {
-  position: fixed;
+  /* position: fixed;
   bottom: 0;
   left: 0;
-  right: 0;
+  right: 0; */
   display: flex;
   justify-content: center;
   align-items: center;
