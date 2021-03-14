@@ -11,7 +11,6 @@ button, input {
 .container {
   width: 100%;
   margin: 0 auto;
-  position: relative;
   max-width: 1180px;
 }
 
@@ -222,47 +221,285 @@ ul {
   letter-spacing: 2px;
 }
 
-.photo {
-  display: block;
-  margin: 0 auto;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  background-image: url('../img/barclays.jpg');
+.match-preview {
+  margin-top: 20px;
+  position: relative;
+  height: 100vh;
+  background: url('../img/matich.jpg') no-repeat;
+  background-size: cover;
 }
 
-.club-victorys__block {
-  width: 33%;
-  margin-bottom: 20px;
-  transition: .3s all;
-}
-
-.club-victorys__block p {
-  text-align: center;
+.match-preview__info {
+  position: absolute;
+  bottom: 4rem;
+  text-transform: uppercase;
   font-weight: bold;
-  font-size: 18px;
+  color: #fff;
+  font-size: 2rem;
 }
 
-.club-victorys__blocks {
-  margin-top: 25px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+.match-preview__gradient {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80%;
+  background: linear-gradient(
+    185deg
+    ,rgba(0,0,0,0) 20%,rgba(0,0,0,.9) 80%);
 }
 
-.club-victorys__block:last-child {
-  margin: 0 auto;
+.match-preview__info::before {
+  content: '';
+  position: absolute;
+  width: 80px;
+  border-top: 3px solid #c81617;
+  top: -16px;
 }
 
-.club-victorys__block:hover {
-  transform: scale(1.2);
+@keyframes swing {
+  40% {
+    transform: translateX(-10px);
+  }
+  60% {
+    transform: translateX(80px);
+  }
+  
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.match-preview__info:hover {
+  animation: swing 1s ease;
 }
 
 /* club-victorys end */
 
+/* news start */
+
+.news {
+  margin-top: 20px;
+  background: #f8f8f8;
+}
+
+.news-blocks {
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.news-block {
+  position: relative;
+  width: 30%;
+  background: #fff;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 1s all ease;
+}
+
+.news-block img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transition: .5s all ease;
+}
+
+.news-block h3, .news-block p{
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.news-block a {
+  width: 65%;
+  text-align: center;
+  color: #000;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  transition: .5s all ease;
+}
+
+.news-block a:hover {
+  background: #c81617;
+  border: 1px solid #c81617;
+  color: #fff;
+}
+
+.news-block p {
+  margin-top: 15px;
+  margin-bottom: 100px;
+}
+
+.news-block:hover  img {
+  transform: scale(1.1);
+}
+
+/* news end*/
 
 
+
+/* shop start */
+
+.shop {
+  margin-top: 20px;
+  background-image: url('../img/oldtrf.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.shop-gradient {
+  background-color: rgba(26,26,26,.65);
+  height: 100vh;
+  width: 100%;
+}
+
+.shop-title {
+  color: #fff;
+  padding-top: 70px;
+  text-align: center;
+  font-size: 4rem;
+}
+
+.slider__wrapper {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  width: 55%;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.slider__content {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.slide-item {
+  position: relative;
+  width: 100%;
+  flex: 0 0 100%;
+}
+
+.slide-item img {
+  display: block;
+  width: auto;
+  max-height: 203px;
+  margin: 15px auto;
+}
+
+.slide-item h3 {
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 27px;
+  margin-top: 20px;
+  font-weight: bold;
+  margin-bottom: 80px;
+}
+
+.slide-item a {
+  position: absolute;
+  border: 1px solid black;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.slide-item a:hover {
+  background: #c81617;
+  border: 1px solid #c81617;
+  color: #fff;
+}
+
+.dots span {
+  background: #c70101;
+  border-radius: 50%;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: .3s all;
+}
+
+.dots span:hover {
+  background: #690606;
+}
+
+.dot-left {
+  position: absolute;
+  left: -15px;
+  top: 45%;
+  transform: translateY(-50%);
+}
+
+.dot-right {
+  position: absolute;
+  right: -15px;
+  top: 45%;
+  transform: translateY(-50%);
+}
+
+.dot-right img {
+  transform: rotate(180deg);
+}
+
+/* shop end */
+
+/* club-victorys start*/
+
+.club-victorys {
+  padding-top: 10px;
+}
+
+.club-victorys__block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.club-victorys__block-item {
+  text-align: center;
+  width: 30%;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.club-victorys__block-item:last-child {
+  margin: 0 auto;
+}
+
+.club-victorys__block-item img {
+  border-radius: 50%;
+  transition: .5s all ease;
+}
+
+.club-victorys__block-item p {
+  font-weight: bold;
+}
+
+.club-victorys__block-item:hover img{
+  transform: scale(1.2);
+}
+
+/* club-victorys end*/
 
 
 /* styled footer start */
