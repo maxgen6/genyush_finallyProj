@@ -1,6 +1,7 @@
 
 
 .gallery-blocks {
+  position: relative;
   padding-top: 10px;
 }
 
@@ -90,13 +91,6 @@
 }
 
 
-
-
-
-
-
-
-
 .tab-item{
   display: none;
   margin-top: 30px;
@@ -111,4 +105,88 @@
   display: grid;
 }
 
+.tab-item img{
+  cursor: pointer;
+  overflow: hidden;
+  transition: .5s all ease-in;
+}
 
+.tab-item img:hover {
+  transform: scale(0.9);
+}
+
+.modal {
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  transition: .5s all ease;
+}
+
+.modal::before {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: rgba(0, 0, 0, .6);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.modal-content{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  width: 85%;
+  padding-top: 100px;
+  text-align: center;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.modal-content img {
+  width: 85%;
+}
+
+.modal-close {
+  position: absolute;
+  z-index: 10;
+  right: 20px;
+  top: 25px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: .5s all ease;
+}
+
+.modal-close::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background-color: #fff;
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background-color: #fff;
+  transform: rotate(-45deg);
+}
+
+.modal-close:hover {
+  transform: scale(1.1);
+}
+
+.modal-active {
+  display: block;
+}
