@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manchester United</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contacts.css">
+  <link rel="stylesheet" href="css/normalize.css">
+</head>
+
+<body>
+  <header class="header">
+    <section class="header__sponsors-block">
+      <ul>
+        <li>
+          <a href="#">
+            <img src="./img/adidas.png" alt="adidas">
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./img/Chevrolet.png" alt="Chevrolet">
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./img/Aon.png" alt="Aon">
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./img/Kohler.png" alt="Kohler">
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section class="header__nav">
+      <div class="container">
+        <nav>
+          <ul class="header__nav-list">
+            <li>
+              <a href="index.html">
+                <img src="./img/header-logo.png" alt="logo">
+              </a>
+            </li>
+            <li><a href="index.html" class="header__nav-list_item ">Главная</a></li>
+            <li><a href="gallery.html" class="header__nav-list_item">Галерея</a></li>
+            <li><a href="#" class="header__nav-list_item">Контакты</a></li>
+            <li><a href="lineup.html" class="header__nav-list_item">Состав команды</a></li>
+            <li><a href="stadium.html" class="header__nav-list_item">Стадион</a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="contacts">
+      <div class="container">
+        <div class="message-block">
+          <div class="message-img"></div>
+          <div class="message-text">
+            <h3 class="message-text__title">Понравился сайт?</h3>
+            <p class="message-text__subtitle">можете связаться со мной для начала сотрудничества</p>
+            <button class="message-btn__action">связаться со мной</button>
+          </div>
+        </div>
+        <div class="support-block">
+          <h2>Еще не являешься болельщиком Manchester United?</h2>
+          <p>Тогда присоединяйся к нам!</p>
+          <button class="show-fans">показать последних присоединившихся к семье Юнайтед</button>
+          <button class="show-fans hide-fans">скрыть</button>
+          <div class="fans"></div>
+        </div>
+      </div>
+      <div class="footer-social-links">
+        <ul>
+          <li>
+            <a href="https://www.youtube.com/manutd" class="social-link social-link__youtube" target="blank"></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/manchesterunited/" class="social-link social-link__insta" target="blank"></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/ManUtd" class="social-link social-link__twitter" target="blank"></a>
+          </li>
+          <li>
+            <a href="https://www.tiktok.com/@manutd?" class="social-link social-link__tiktok" target="blank"></a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/manchesterunited" class="social-link social-link__facebook" target="blank"></a>
+          </li>
+        </ul>
+      </div>  
+
+      <div class="form-block">
+        <form class="form">
+          <h3>Заполните пожалуйста форму для обратной связи</h3>
+          <label for="email">
+            <span>email</span>
+            <input type="email" class="form-email" placeholder="Введите ваш email">
+          </label>
+          <label for="phone">
+            <span>телефон</span>
+            <input type="tel" class="form-phone" placeholder="Введите ваш телефон">
+          </label>
+          <label for="textarea">
+            <textarea placeholder="Ваше сообщение"></textarea>
+          </label>
+          <button type="submit">отправить </button>
+          <div class="close"></div>
+        </form>
+      </div>
+    </section>
+    
+  </main>
+
+
+  <footer class="footer">
+    <p>&copy; 2021 Manchester United FC</p>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
