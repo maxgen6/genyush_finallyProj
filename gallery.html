@@ -40,18 +40,38 @@
     <section class="header__nav">
       <div class="container">
         <nav>
-          <ul>
+          <ul class="header__nav-list">
             <li>
-                <a href="index.html">
+                <a href="#">
                   <img src="./img/header-logo.png" alt="logo">
                 </a>
             </li>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="#">Галерея</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
-            <li><a href="lineup.html">Состав команды</a></li>
-            <li><a href="stadium.html">Стадион</a></li>
+            <li><a href="index.html" class="header__nav-list_item">Главная</a></li>
+            <li><a href="gallery.html" class="header__nav-list_item">Галерея</a></li>
+            <li><a href="contacts.html" class="header__nav-list_item">Контакты</a></li>
+            <li><a href="lineup.html" class="header__nav-list_item">Состав команды</a></li>
+            <li><a href="stadium.html" class="header__nav-list_item">Стадион</a></li>
           </ul>
+        </nav>
+        <nav class="burger-menu">
+          <div class="menu"></div>
+          <ul class="header__nav-list">
+            <li>
+                <a href="#">
+                  <img src="./img/header-logo.png" alt="logo">
+                </a>
+            </li>
+          </ul>
+          <div class="menu-blur">
+            <ul>
+              <li><a href="index.html" class="header__nav-list_item">Главная</a></li>
+              <li><a href="#" class="header__nav-list_item">Галерея</a></li>
+              <li><a href="contacts.html" class="header__nav-list_item">Контакты</a></li>
+              <li><a href="lineup.html" class="header__nav-list_item">Состав команды</a></li>
+              <li><a href="stadium.html" class="header__nav-list_item">Стадион</a></li>
+            </ul>
+            <div class="menu-close"></div>
+          </div>
         </nav>
       </div>
     </section>

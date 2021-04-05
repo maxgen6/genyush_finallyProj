@@ -1,5 +1,6 @@
 .stadium {
     position: relative;
+    z-index: 1;
     background-image: url('../img/stadium/ot.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -186,4 +187,21 @@
 
 footer {
     margin-top: 25px;
+}
+
+@media screen and (max-width: 580px) {
+    .stadium h1 {
+        font-size: 2rem;
+    }
+
+    .card-info {
+        width: 100%;
+    }
+
+    .card-info__description h2 {
+        line-height: 22px;
+        font-size: 1.5rem;
+        margin-bottom: 0px;
+    
+    }
 }

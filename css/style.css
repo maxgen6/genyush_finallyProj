@@ -52,6 +52,64 @@ ul {
   background-color: #c70101;
 }
 
+.burger-menu {
+  display: none;
+}
+
+.menu-blur {
+  transform: translate(-200%);
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #c70101;
+  transition: .5s all;
+}
+
+.menu-blur ul {
+  text-align: center;
+}
+
+.menu-blur a {
+  display: block;
+  margin-top: 25px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+
+.menu-close {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  transition: .5s all;
+}
+
+.menu-close::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 2px;
+  background: #fff;
+  transform: rotate(45deg);
+}
+
+.menu-close::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 2px;
+  background: #fff;
+  transform: rotate(-45deg);
+}
+
 .header__nav  nav > ul > li > a > img {
   width: 60px;
   height: 60px;
@@ -532,23 +590,59 @@ ul {
     width: 80%;
   }
 
-  .preview {
+
+  .match-preview {
     height: 50vh;
   }
 
-  .match-preview {
-    background-size: contain;
-    height: 32vh;
-  }
-
-  .shop {
-    height: 60vh;
-  }
+  
 }
 
 @media screen and (max-width: 770px) {
   .container {
     max-width: 720px;
+  }
+
+  .header__nav nav {
+    display: none;
+  }
+
+  .header__nav .burger-menu {
+    display: block;
+  }
+
+  .menu {
+    position: relative;
+    top: 35px;
+    left: 80px;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #fff;
+  }
+
+  .menu-active {
+    transform: translate(0);
+  }
+
+  .menu::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 3px;
+    top: -10px;
+    background: #fff;
+  }
+
+  .menu::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 40px;
+    top: 10px;
+    height: 3px;
+    background: #fff;
   }
 
   .preview {
@@ -568,6 +662,97 @@ ul {
   }
 }
 
+@media screen and (max-width: 580px) {
+  .container {
+    max-width: 360px;
+  }
+
+  .menu-blur {
+    width: 100%;
+  }
+
+  .preview__info ul .preview__info-title {
+    font-size: 1rem;
+  }
+
+  .preview__info ul .preview__info-img img {
+    width: 4rem;
+  }
+
+  .news-block {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .match-preview {
+    height: 30vh;
+  }
+
+  .match-preview__info {
+    bottom: 1rem;
+    font-size: 1rem;
+    left: 20px;
+  }
+
+  .shop-title {
+    font-size: 2rem;
+  }
+
+  .slider__wrapper {
+    width: 80%;
+  }
+
+  .shop {
+    height: 95vh;
+  }
+
+  .club-victorys__block-item {
+    width: 48%;
+  }
+
+  .club-victorys__block-item p {
+    font-size: 12px;
+  }
+
+  .preview__info ul li .vs {
+    font-size: 1rem;
+  }
+
+  .preview {
+    height: 85vh;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .container {
+    width: 300px;
+  }
+
+  .preview__info ul .preview__info-img img {
+    width: 3rem;
+  }
+
+  .shop-title {
+    padding-top: 20px;
+  }
+
+  .shop {
+    height: 115vh;
+  }
+
+  .club-victorys__block-item {
+    width: 100%;
+  }
+
+  .match-preview {
+    height: 40vh;
+  }
+
+  .preview__info ul .preview__info-title {
+    font-size: 0.7rem;
+  }
+
+}
 
 
 
