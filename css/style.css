@@ -703,7 +703,12 @@ ul {
   }
 
   .shop {
-    height: 95vh;
+    height: 105vh;
+  }
+
+  #tab-item.active {
+    display: flex;
+    flex-direction: column;
   }
 
   .club-victorys__block-item {
